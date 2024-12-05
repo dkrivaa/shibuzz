@@ -8,7 +8,12 @@ try:
     df = pd.DataFrame(results[0], columns=['file1', 'file2'])
 
     st.subheader('Your Results:')
-    st.dataframe(df, hide_index=True)
+    # st.dataframe(df, hide_index=True)
+    for _, row in df.iterrows():
+        st.write(row['file1'])
+        st.write(f':orange[{row['file2']}]')
+        st.divider()
+
 
     st.write('---')
 
