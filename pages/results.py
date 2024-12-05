@@ -9,13 +9,12 @@ try:
 
     st.subheader('Your Results:')
     # st.dataframe(df, hide_index=True)
-    for _, row in df.iterrows():
-        st.write(row['file1'])
-        st.write(f':orange[{row['file2']}]')
-        st.divider()
+    with st.expander('Results'):
+        for _, row in df.iterrows():
+            st.write(row['file1'])
+            st.write(f':orange[{row['file2']}]')
+            st.divider()
 
-
-    st.write('---')
 
     st.subheader('Summary:')
     st.write(f'File 1: :blue[{results[1][0]}] out of :blue[{results[1][1]}] got one of preferred options')
