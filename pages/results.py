@@ -15,7 +15,6 @@ try:
             st.write(f':orange[{row['file2']}]')
             st.divider()
 
-
     st.subheader('Summary:')
     st.write(f'File 1: :blue[{results[1][0]}] out of :blue[{results[1][1]}] got one of preferred options')
     st.write(f'File 2: :blue[{results[2][0]}] out of :blue[{results[2][1]}] got one of preferred options')
